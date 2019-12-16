@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1576507456 source:c:\users\magic\desktop\college\fall 2019\algorithms & data structures\chainedtablesexam3\linked_list.cpp
+	"linked_list.h"
+
+1576507466 c:\users\magic\desktop\college\fall 2019\algorithms & data structures\chainedtablesexam3\linked_list.h
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1576511661 source:c:\users\magic\desktop\college\fall 2019\algorithms & data structures\chainedtablesexam3\main.cpp
+	"table_tests.h"
+
+1576507515 c:\users\magic\desktop\college\fall 2019\algorithms & data structures\chainedtablesexam3\table_tests.h
+	"chained_table.h"
+	<string>
+
+1576507444 c:\users\magic\desktop\college\fall 2019\algorithms & data structures\chainedtablesexam3\chained_table.h
+	"record.h"
+	"linked_list.h"
+	<stdio.h>
+
+1576507496 c:\users\magic\desktop\college\fall 2019\algorithms & data structures\chainedtablesexam3\record.h
+	<stdlib.h>
+	<string.h>
+
+1576507487 source:c:\users\magic\desktop\college\fall 2019\algorithms & data structures\chainedtablesexam3\record.cpp
+	"record.h"
+
+1576510938 source:c:\users\magic\desktop\college\fall 2019\algorithms & data structures\chainedtablesexam3\chained_table.cpp
+	"chained_table.h"
+
+1576507506 source:c:\users\magic\desktop\college\fall 2019\algorithms & data structures\chainedtablesexam3\table_tests.cpp
+	"table_tests.h"
+
