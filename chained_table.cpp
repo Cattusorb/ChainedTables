@@ -76,10 +76,11 @@ bool insert(HashTable* table, const void* key, const void* value) {
     {
         return false;
     }
+    //if (search(table, key) == NULL) {
+    //    return false;
+    //}
 
-	Record* r;
-	r->key = (void*)key;
-	r->value = (void*)value;
+	Record* r = create_record(key, table->key_size, value, table->value_size);
 	add_beginning(table->buckets[table->hash_function(key) % table->N], r, sizeof(Record*));
 	return true;
 }
@@ -99,7 +100,12 @@ void* search(const HashTable* table, const void* key) {
         return NULL;
     }
 
-	Node* node = table->buckets[table->hash_function(key) % table->N]->first;
+    if (table->N == 0)
+    {
+        return NULL;
+    }
+
+	Node* node = table->buckets[table->hash_function(key) % table->N]->first; // segmentation fault
 
 	while (node != NULL)
     {

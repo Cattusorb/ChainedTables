@@ -108,7 +108,7 @@ size_t hash_string(const void* aString) {
 int compare_strings(const void* p1, const void* p2) {
 	string s1 = *((string*) p1);
 	string s2 = *((string*) p2);
-	
+
 	return s1.compare(s2);
 }
 
@@ -165,7 +165,7 @@ void add_null_key_fails(){
 
 void add_null_value_fails(){
 	HashTable* table = empty_table();
-	test_false("Can't add NULL key", insert(table, &KATE, NULL));
+	test_false("Can't add NULL value", insert(table, &KATE, NULL));
 }
 
 void add_duplicate_key_fails() {
@@ -252,7 +252,7 @@ void replace_null_key_fails() {
 void replace_null_value_fails() {
 	HashTable* table = empty_table();
 	fill_table(table);
-	test_false("Can't replace with NULL value", replace(table, &JEREMY, NULL));		
+	test_false("Can't replace with NULL value", replace(table, &JEREMY, NULL));
 }
 
 void replace_key_not_present_fails() {
@@ -282,7 +282,7 @@ void test_remove_then_add_full_table() {
 	fill_table(table);
 
 	remove(table, &JEREMY);
-	
+
 	if (insert(table, &KATE, &KATE_NUMBER)) {
 		long* number = (long*) search(table, &KATE);
 		test_longs("Entry added after delete from full table", *number, KATE_NUMBER);
